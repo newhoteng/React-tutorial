@@ -15,8 +15,8 @@ const TodoItem = ({
   const handleEditing = () => {
     setEditing(true);
   };
-  const viewMode = {};
-  const editMode = {};
+  let viewMode = {};
+  let editMode = {};
   if (editing) {
     viewMode.display = 'none';
   } else {
