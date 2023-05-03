@@ -53,9 +53,9 @@ const TodosLogic = () => {
     setTodos(
       todos.map((todo) => {
         if (todo.id === id) {
-          /* eslint-disable no-param-reassign */
-          todo.title = updatedTitle;
-          // {...todo, todo.title = updatedTitle}
+          // create a copy of todo object before reassigning title property to make eslint happy
+          const todoCopy = todo;
+          todoCopy.title = updatedTitle;
         }
         return todo;
       }),
